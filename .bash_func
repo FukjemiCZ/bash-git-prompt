@@ -167,6 +167,15 @@ function create_prompt_gituser {
     fi
 }
 
+#function url
+function gitpipe {
+        gitrepopath=$(git config --get remote.origin.url | cut -d "@" -f 2| cut -d ":" -f 2 | cut -d "." -f 1)
+        gitreposrv=$(git config --get remote.origin.url | cut -d "@" -f 2 | cut -d ":" -f 1)
+        if [ $gitreposrv = gitlab.com ] ; then
+           google-chrome $gitreposrv/$gitrepopath/-/pipelines
+        fi
+}
+
 function create_prompt {
 
     history -a
