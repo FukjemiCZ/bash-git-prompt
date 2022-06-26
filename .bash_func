@@ -169,6 +169,7 @@ function create_prompt_gituser {
 
 function create_prompt {
 
+    history -a
     last_command=$?
     time_now=$(date +"%H:%M:%S")
 
