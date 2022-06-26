@@ -33,3 +33,5 @@ alias tricks='cat ~/.bash_tricks'
 alias svim='sudo vim'
 alias fuck='sudo $(history -p !!)'
 
+# network
+alias ip='ip -c'
